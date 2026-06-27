@@ -238,20 +238,25 @@
       padding: 18px 20px;
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(86, 204, 242, 0.08);
     }
-    .mini-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-    .mini-logo { font-size: 11px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .mini-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .mini-logo { font-size: 9px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
     .mini-logo span { color: #56ccf2; }
     .mini-dot-row { display: flex; gap: 4px; }
-    .mini-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); }
-    .mini-headline { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.35; margin: 0 0 14px; max-width: 220px; }
-    .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .mini-stat { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 10px 12px; }
-    .mini-stat b { display: block; font-size: 16px; color: #56ccf2; }
-    .mini-stat span { font-size: 8px; color: #a3b1c6; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+    .mini-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); }
+    .mini-shot { width: 100%; height: 92px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; opacity: 0.92; display: block; }
+    .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .mini-stat { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 8px 10px; }
+    .mini-stat b { display: block; font-size: 13px; color: #56ccf2; }
+    .mini-stat span { font-size: 6.5px; color: #a3b1c6; text-transform: uppercase; letter-spacing: .04em; font-weight: 700; }
     .laptop-base { height: 14px; width: 92%; margin: 0 auto; background: linear-gradient(180deg, #2a3950, #16222f); border-radius: 0 0 10px 10px; }
     .laptop-stand { height: 8px; width: 30%; margin: 0 auto; background: linear-gradient(180deg, #1c2735, #0d141d); clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%); }
 
-    .ar-mode .mini-headline, .ar-mode .mini-stat span { letter-spacing: 0; }
+    .hero-right { display: flex; flex-direction: column; gap: 28px; align-items: stretch; }
+    .about-card { display: block; max-width: 420px; margin: 0 auto; text-decoration: none; }
+    .about-card p { font-size: 12.5px; line-height: 1.65; color: var(--on-surface-variant, #a3b1c6); margin: 10px 0 14px; }
+    .about-card .about-link { font-size: 11px; font-weight: 700; color: #56ccf2; }
+
+    .ar-mode .mini-stat span { letter-spacing: 0; }
   </style>
 </head>
 <body>
@@ -275,6 +280,7 @@
 <li><a data-ar="المشاريع" data-en="Projects" href="#projects">Projects</a></li>
 <li><a data-ar="الخبرة" data-en="Experience" href="#experience">Experience</a></li>
 <li><a data-ar="التعليم" data-en="Education" href="#education">Education</a></li>
+<li><a data-ar="التطوع" data-en="Volunteering" href="#volunteering">Volunteering</a></li>
 <li><a data-ar="تواصل" data-en="Contact" href="#contact">Contact</a></li>
 </ul>
 <div class="flex items-center gap-4">
@@ -314,6 +320,7 @@
 <a class="btn-ghost" href="#contact"><span data-ar="لنتواصل" data-en="Let's Connect">Let's Connect</span></a>
 </div>
 </div>
+<div class="hero-right">
 <div class="laptop-stage">
 <div class="laptop-glow"></div>
 <div class="laptop">
@@ -322,17 +329,22 @@
 <div class="mini-logo">Layan <span>Al-Harbi</span></div>
 <div class="mini-dot-row"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div>
 </div>
-<p class="mini-headline" data-ar="تحويل البيانات المعقدة إلى رؤى قابلة للتنفيذ" data-en="Turning Complex Data into Actionable Insights">Turning Complex Data into Actionable Insights</p>
+<img alt="Live Power BI dashboard" class="mini-shot" loading="lazy" src="assets/powerbi-health-dashboard.jpg"/>
 <div class="mini-stats">
 <div class="mini-stat"><b>500+</b><span data-ar="تقرير تم تحليله" data-en="Reports Analyzed">Reports Analyzed</span></div>
 <div class="mini-stat"><b>BI</b><span data-ar="تطوير لوحات البيانات" data-en="Dashboard Dev">Dashboard Dev</span></div>
-<div class="mini-stat"><b>MIS</b><span data-ar="درجة البكالوريوس" data-en="B.Sc. Degree">B.Sc. Degree</span></div>
-<div class="mini-stat"><b>6+</b><span data-ar="شهادة مهنية" data-en="Certifications">Certifications</span></div>
 </div>
 </div>
 <div class="laptop-base"></div>
 <div class="laptop-stand"></div>
 </div>
+</div>
+<a class="glass-card about-card p-8" href="#about">
+<span class="section-label" data-ar="الملخص المهني" data-en="Professional Summary">Professional Summary</span>
+<h3 class="text-xl font-bold text-white" data-ar="عن ليان" data-en="About Layan">About <span class="text-surface-tint">Layan</span></h3>
+<p data-ar="خريجة نظم المعلومات الإدارية من جامعة تبوك، تمتلك خبرة موثّقة في ذكاء الأعمال، تحليلات البيانات، وحوكمة البيانات. متخصصة في تحويل مجموعات البيانات التشغيلية المعقدة إلى رؤى واضحة وجاهزة للمستوى التنفيذي تدعم اتخاذ القرار الاستراتيجي." data-en="Management Information Systems graduate from the University of Tabuk, with demonstrated expertise in Business Intelligence, healthcare analytics, and data governance. Skilled at transforming complex operational datasets into clear, executive-ready insights that drive strategic decision-making.">Management Information Systems graduate from the University of Tabuk, with demonstrated expertise in Business Intelligence, healthcare analytics, and data governance. Skilled at transforming complex operational datasets into clear, executive-ready insights that drive strategic decision-making.</p>
+<span class="about-link" data-ar="عني" data-en="About">About</span>
+</a>
 </div>
 </div>
 </header>
@@ -419,6 +431,7 @@
 </div>
 <div class="flex flex-wrap gap-2">
 <span class="skill-tag">Flutter</span>
+<span class="skill-tag">Web Development</span>
 <span class="skill-tag">Firebase</span>
 <span class="skill-tag">Excel</span>
 </div>
@@ -442,7 +455,7 @@
 </div>
 </div>
 <div class="p-6 bg-black/20">
-<img alt="Live Power BI dashboard" class="w-full rounded-xl opacity-80 hover:opacity-100 transition-all duration-700 shadow-2xl" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7HxJ0iSYWahb3WuziNyMMOhUTXivTKhntaNHidgOckdwuWM4ctDi2epesyDbLJkpBTvzZdPxZYN4XQXSf-4HnN8UJwAL1-xs1eRlSEO568p7ZqanUF-81zyqwgRQ8a7eeVCZk5JfODPg9iI0j0pB8ieSgddCtC7ZUWITMMhz60_Lq-kSXzyYxcvqII0S8r3Oqefp_9MMbmgzSgKazVPeTBes_jm2tl7SiK6p_6_Q9yaGQSd3ut8sPVbdUUMc_0bMDz0g3d3o4f8"/>
+<img alt="Madinah Health Cluster Power BI dashboard" class="w-full rounded-xl opacity-80 hover:opacity-100 transition-all duration-700 shadow-2xl" loading="lazy" src="assets/powerbi-health-dashboard.jpg"/>
 </div>
 <div class="p-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
@@ -472,7 +485,7 @@
 </div>
 </div>
 <div class="p-6 bg-black/20">
-<img alt="Data Governance Dashboard" class="w-full rounded-xl opacity-80 hover:opacity-100 transition-all duration-700 shadow-2xl" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPSRyBpVkpikrJd641MBu6ZctMYMMuh8XqEMN0mmF3em6SBgQLjM1x3CPKCoADalU-ObzQ3j1alVXx_S2OB-K3FSoj8LrN4KoJ-nJIx9k6RpXawD5hLFfPoBtsJa6mtF4w1lmGrOQtjLzS9B8TteJtdGfF19HGE2CSMT60yHwZ09GXXvv4Hwk6QNfSUQ33fEnJ0PLJDcuNIFJuTn1PCNAnZOTePDtXWhV9Frv-z9rDoLVYqmQm28XlnB6JH8paM6ri3y-_Uto_TXo"/>
+<img alt="University data Power BI dashboard built on Oracle SIS tables" class="w-full rounded-xl opacity-80 hover:opacity-100 transition-all duration-700 shadow-2xl" loading="lazy" src="assets/powerbi-university-dashboard.jpg"/>
 </div>
 <div class="p-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
@@ -490,6 +503,37 @@
 </div>
 </div>
 </div>
+<!-- Project 3 -->
+<div class="glass-card overflow-hidden">
+<div class="p-10 bg-white/5 border-b border-white/10">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-2xl font-bold text-white mb-2" data-ar="واجهة تطبيق موبايل بتقنية Flutter" data-en="Mobile App UI — Flutter Camp">Mobile App UI — Flutter Camp</h3>
+<p class="text-surface-tint text-xs font-bold tracking-widest uppercase" data-ar="Flutter · تطوير الموبايل · Dart" data-en="Flutter · Mobile Development · Dart">Flutter · Mobile Development · Dart</p>
+</div>
+<div class="text-5xl font-black text-white/10 leading-none">03</div>
+</div>
+</div>
+<div class="p-6 bg-black/20">
+<img alt="Flutter mobile app UI prototype built during a Flutter development camp" class="w-full rounded-xl opacity-80 hover:opacity-100 transition-all duration-700 shadow-2xl" loading="lazy" src="assets/flutter-app-mockup.jpg"/>
+</div>
+<div class="p-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
+<div>
+<h4 class="text-[11px] font-bold text-surface-tint uppercase mb-4" data-ar="السياق" data-en="Context">Context</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-ar="ضمن مخيم تدريبي عملي على Flutter، بُنيت واجهات تطبيق موبايل تفاعلي لعرض تفاصيل الأفلام، شملت صفحات المعلومات وطاقم العمل وقائمة المفضلة." data-en="As part of a hands-on Flutter development camp, built interactive mobile app screens for a movie-details experience — including info pages, cast &amp; crew listings, and a favorites feature.">As part of a hands-on Flutter development camp, built interactive mobile app screens for a movie-details experience — including info pages, cast &amp; crew listings, and a favorites feature.</p>
+</div>
+<div>
+<h4 class="text-[11px] font-bold text-surface-tint uppercase mb-4" data-ar="ما تم تطبيقه" data-en="What Was Applied">What Was Applied</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-ar="تطبيق مبادئ تصميم الواجهات وإدارة الحالة في Flutter، مع توظيف خلفيتها في تحليل البيانات لتقديم تجربة مستخدم أوضح وأكثر تنظيمًا." data-en="Applied UI design principles and state management in Flutter, drawing on a data-analysis mindset to deliver a clearer, more structured user experience.">Applied UI design principles and state management in Flutter, drawing on a data-analysis mindset to deliver a clearer, more structured user experience.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="skill-tag highlight">Flutter</span> <span class="skill-tag">Dart</span> <span class="skill-tag">Mobile UI</span>
+</div>
+</div>
+</div>
+
 </div>
 </section>
 <!-- EXPERIENCE -->
@@ -585,6 +629,35 @@
 <div class="text-surface-tint"><svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path></svg></div>
 <div><div class="text-base font-bold text-white">Supercharge Data Analytics with GenAI</div><div class="text-[11px] text-on-surface-variant font-bold uppercase tracking-wider">IBM · 2026</div></div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<!-- VOLUNTEERING -->
+<section id="volunteering">
+<span class="section-label" data-ar="الأثر المجتمعي" data-en="Community Impact">Community Impact</span>
+<h2 class="text-4xl font-bold mb-16 text-white" data-ar="التطوع والمشاركة المجتمعية" data-en="Volunteering &amp; Community">Volunteering <span class="text-surface-tint">&amp; Community</span></h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="glass-card overflow-hidden">
+<img alt="Madinah Eye Volunteer Team certificate and Excellence Medal" class="w-full h-64 object-cover" loading="lazy" src="assets/volunteer-certificate.jpg"/>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4 gap-4">
+<h3 class="text-lg font-bold text-white" data-ar="مبادرة رمضان سلام" data-en="Ramadan Salam Initiative">Ramadan Salam Initiative</h3>
+<span class="text-[10px] font-bold text-surface-tint uppercase tracking-widest" data-ar="فريق عين المدينة" data-en="Madinah Eye Team">Madinah Eye Team</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-5" data-ar="تطوّعت مع فريق عين المدينة التطوعي ضمن مبادرة «رمضان سلام»، وساهمت في تنظيم الحشود وتعزيز السلامة وخدمة الزوار خلال شهر رمضان المبارك 1447هـ على مدى 6 أيام بإجمالي 36 ساعة تطوعية، وحصلت على وسام التميز 2026 تقديرًا لمشاركتها." data-en="Volunteered with the Madinah Eye Volunteer Team on the &quot;Ramadan Salam&quot; initiative — contributing to crowd organization, visitor safety, and guest services during the blessed month of Ramadan 1447H, over 6 days and 36 total volunteer hours, and was awarded the 2026 Excellence Medal in recognition of her contribution.">Volunteered with the Madinah Eye Volunteer Team on the "Ramadan Salam" initiative — contributing to crowd organization, visitor safety, and guest services during the blessed month of Ramadan 1447H, over 6 days and 36 total volunteer hours, and was awarded the 2026 Excellence Medal in recognition of her contribution.</p>
+<div class="flex flex-wrap gap-2">
+<span class="skill-tag highlight" data-ar="36 ساعة تطوعية" data-en="36 Volunteer Hours">36 Volunteer Hours</span>
+<span class="skill-tag" data-ar="تنظيم الحشود" data-en="Crowd Management">Crowd Management</span>
+<span class="skill-tag" data-ar="سلامة الزوار" data-en="Visitor Safety">Visitor Safety</span>
+</div>
+</div>
+</div>
+<div class="glass-card overflow-hidden">
+<img alt="Course completion certificate handover ceremony" class="w-full h-64 object-cover" loading="lazy" src="assets/training-certificate-group.jpg"/>
+<div class="p-8">
+<h3 class="text-lg font-bold text-white mb-4" data-ar="شهادة إتمام دورة" data-en="Course Completion Certificate">Course Completion Certificate</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed" data-ar="شاركت في ورشة تدريبية أكاديمية ضمن فعاليات الكلية، وحصلت على شهادة إتمام تقديرًا للمشاركة الفاعلة." data-en="Took part in an academic training workshop held at the college, and received a certificate of completion in recognition of active participation.">Took part in an academic training workshop held at the college, and received a certificate of completion in recognition of active participation.</p>
 </div>
 </div>
 </div>
